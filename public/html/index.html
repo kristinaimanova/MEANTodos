@@ -10,7 +10,9 @@
 
   <div ng-controller="TodoController">
     {{ message }}
-
+    <input type="text" ng-model="greeting">
+    {{ greeting }}
+    <button ng-click='print(greeting)'>Click</button>
   </div>
   <script src="js/app.js"></script>
 </body>
