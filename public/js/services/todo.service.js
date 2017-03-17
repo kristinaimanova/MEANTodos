@@ -9,8 +9,13 @@
         function getAll(){
             return $http.get(baseURL);
         }
+
+        function create(x){
+            return $http.post(baseURL, x);
+        }
         return {
-            getAll: getAll
+            getAll: getAll,
+            create: create
         };
     }
 })();
