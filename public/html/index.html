@@ -9,7 +9,10 @@
 <body>
 
   <div ng-controller="TodoController">
-    <button ng-click='print(greeting)'></button>
+    <button ng-click='getTodos()'>Get Todos</button>
+    <ul>
+        <li ng-repeat='todo in todos'>{{  todo.title }}</li> 
+    </ul>
   </div>
   <script src="js/app.js"></script>
   <script src="js/controllers/todo.controller.js"></script>
