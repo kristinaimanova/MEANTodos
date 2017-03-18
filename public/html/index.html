@@ -10,7 +10,6 @@
 
   <div ng-controller="TodoController">
 
-    <button ng-click='getTodos()'>Get Todos</button>
     <ul>
         <li ng-repeat='todo in todos'> {{  todo.description }} <button ng-click='deleteTodo(todo)'>X</button><input type="checkbox"></li>
         <li>{{ newTodo.description }}</li>
