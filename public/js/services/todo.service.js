@@ -16,10 +16,14 @@
         function deleteTodo(todo){
             return $http.delete(`${baseURL}/${todo._id}`);
         }
+        function update(todo){
+            return $http.put(`${baseURL}/${todo._id}`, todo);
+        }
         return {
             getAll: getAll,
             create: create,
-            delete: deleteTodo
+            delete: deleteTodo,
+            update: update
         };
     }
 })();

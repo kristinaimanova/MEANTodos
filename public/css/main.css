@@ -1,0 +1,8 @@
+*{
+    font-family: 'Oswald', sans-serif;
+}
+button{
+    border-radius: 0px;
+    height: 30px;
+    width: 30px;
+}

@@ -5,14 +5,25 @@
   <title>MEANTodos</title>
   <link rel="stylesheet" href="css/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 <body>
-
+    <h1>Hi, here's what you gotta do</h1>
   <div ng-controller="TodoController">
 
     <ul>
-        <li ng-repeat='todo in todos'> {{  todo.description }} <button ng-click='deleteTodo(todo)'>X</button><input type="checkbox"></li>
-        <li>{{ newTodo.description }}</li>
+        <li ng-repeat='todo in todos'>
+            <div ng-hide='todo.edit'>
+                {{  todo.description }}
+                <button ng-click='deleteTodo(todo)'>X</button>
+                <button ng-click='edit(todo)'>edit</button>
+                <input type="checkbox" ng-model="todo.completed">
+            </div>
+            <div ng-show='todo.edit'>
+                <input type="text" ng-model="todo.description">
+                <button ng-click='update(todo)'>Update</button>
+            </div>
+        </li>
     </ul>
     <input type="text" ng-model='newTodo.description' placeholder="enter new todo"></input>
     <button ng-click='addTodo(newTodo)'> Add Todo </button>
