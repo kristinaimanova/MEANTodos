@@ -11,13 +11,21 @@
             $scope.deleteTodo = deleteTodo;
             $scope.update = update;
             $scope.edit = edit;
+            $scope.checkbox = checkbox;
             getTodos();
+            function checkbox(todo){
+                TodoService.update(todo)
+                .then(function(response){
+                    getTodos();
+                    console.log('checking completed')
+                });
+            }
             function update(todo){
                 console.log('updating');
                 TodoService.update(todo)
                     .then(function(response){
                         getTodos();
-                    })
+                    });
                 todo.edit = false;
             }
             function edit(todo){

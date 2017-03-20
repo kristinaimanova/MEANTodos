@@ -1,8 +1,35 @@
 *{
     font-family: 'Oswald', sans-serif;
 }
-button{
-    border-radius: 0px;
-    height: 30px;
-    width: 30px;
+
+
+.strike {
+    text-decoration: line-through;
+}
+
+.editbutton{
+    height: 24px;
+    width: 24px;
+    background-image: url('../svg/Pencil.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+}
+.deletebutton{
+    height: 24px;
+    width: 24px;
+    background-image: url('../svg/trash_bin.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+}
+
+span{
+    font-size: 1.8em;
+}
+
+ul{
+    list-style: none;
 }

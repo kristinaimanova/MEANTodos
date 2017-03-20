@@ -14,10 +14,10 @@
     <ul>
         <li ng-repeat='todo in todos'>
             <div ng-hide='todo.edit'>
-                {{  todo.description }}
-                <button ng-click='deleteTodo(todo)'>X</button>
-                <button ng-click='edit(todo)'>edit</button>
-                <input type="checkbox" ng-model="todo.completed">
+                <span ng-class="{'strike': todo.completed}">{{  todo.description }}</span>
+                <input type="checkbox" ng-model="todo.completed" ng-change="checkbox(todo)">
+                <button class='editbutton' ng-click='edit(todo)'></button>
+                <button class='deletebutton' ng-click='deleteTodo(todo)'></button>
             </div>
             <div ng-show='todo.edit'>
                 <input type="text" ng-model="todo.description">
