@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="MEANTodos">
+
+<html lang="en" ng-app='MEANTodos'>
 <head>
   <meta charset="UTF-8">
   <title>MEANTodos</title>
@@ -10,11 +11,10 @@
 <body>
     <h1>Hi, here's what you gotta do</h1>
   <div ng-controller="TodoController">
-
     <ul>
         <li ng-repeat='todo in todos'>
             <div ng-hide='todo.edit'>
-                <span ng-class="{'strike': todo.completed}">{{  todo.description }}</span>
+                <span ng-class="{'strike': todo.completed}">{{ todo.description }}</span>
                 <input type="checkbox" ng-model="todo.completed" ng-change="checkbox(todo)">
                 <button class='editbutton' ng-click='edit(todo)'></button>
                 <button class='deletebutton' ng-click='deleteTodo(todo)'></button>

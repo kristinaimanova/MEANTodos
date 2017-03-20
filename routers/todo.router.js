@@ -53,6 +53,7 @@ router.put('/todos/:id', function(req, res){
       res.status(200).json({
         msg: 'Successfully updated'
     });
+
     }
   });
 });
